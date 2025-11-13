@@ -1,0 +1,418 @@
+/* 🔹 Animated gradient background */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #dcdcdc, #f2f2f2, #e0e0e0, #f7f7f7);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🔸 Login form container */
+.login-form {
+  background-color: #ffffff;
+  padding: 40px 35px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Title */
+.login-form h2 {
+  color: #2e2e2e;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+.login-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f8f8f8;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #b0b0b0;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(150, 150, 150, 0.1);
+  transform: scale(1.01);
+}
+
+/* Button */
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4b4b4b; /* deep gray */
+  color: #f5f5f5;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #2f2f2f;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer text */
+.login-form p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.login-form span {
+  color: #8b7355; /* subtle beige accent */
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.login-form span:hover {
+  color: #5e4631;
+  text-decoration: underline;
+}
+
+/* 🌈 Background animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🪶 Form slide animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* admin
+ */
+
+
+ /* 🔹 Full-page layout */
+.admin-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(-45deg, #dcdcdc, #f2f2f2, #e0e0e0, #f7f7f7);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  padding-top: 60px;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🔸 Dashboard container */
+.admin-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Title */
+.admin-container h2 {
+  color: #2e2e2e;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* No user text */
+.no-user {
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* 🔹 User list section */
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🔸 User card */
+.user-card {
+  background: #f8f8f8;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  animation: slideUp 0.5s ease;
+}
+
+.user-card:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* User info */
+.user-info {
+  color: #333;
+  font-size: 15px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #b0b0b0;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #7d7d7d;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background-color: #6c6c6c;
+  color: #f5f5f5;
+}
+
+.delete-btn:hover {
+  background-color: #404040;
+  transform: scale(1.05);
+}
+
+/* 🔄 Animations */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* edit */
+
+
+/* 🔹 Background with animated gradient */
+.edit-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #dcdcdc, #f2f2f2, #e0e0e0, #f7f7f7);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🔸 Edit form container */
+.edit-form {
+  background-color: #ffffff;
+  padding: 40px 35px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Heading */
+.edit-form h2 {
+  color: #2e2e2e;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.edit-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  background-color: #f8f8f8;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.edit-form input:focus {
+  border-color: #b0b0b0;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(150, 150, 150, 0.1);
+  transform: scale(1.01);
+}
+
+/* Button */
+.edit-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4b4b4b;
+  color: #f5f5f5;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-form button:hover {
+  background-color: #2f2f2f;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌈 Background animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Navbar container */
+.navbar {
+  background: linear-gradient(135deg, #cfcfcf, #a5a5a5);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* App name styling */
+.app-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2f2f2f;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInSlide 1.8s ease forwards;
+}
+
+/* Entry animation when page loads */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gentle glowing effect after appearing */
+.app-name:hover {
+  color: #3a3a3a;
+  text-shadow: 0 0 10px rgba(90, 90, 90, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+
